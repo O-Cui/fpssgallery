@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
+import SearchBar from './Components/SearchBar.js';
+import VideoPlayer from './Components/VideoPlayer.js';
+import Data from "./Data.json";
+import Dropdown from "./Components/Dropdown.js";
 function App() {
+  const [linkValue, getLinkValue] = useState("https://www.youtube.com/watch?v=dJ0Xcu0vJNU");
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  <div className="App">
+      <div className="Header">
+        <h1> Fleetwood Park Grade 8 Gallery</h1>
+      </div>
+    
+    <SearchBar placeholder="Enter a name" data={Data} getLinkValue={getLinkValue}/>
+    <VideoPlayer link={linkValue}/>
+
+  </div>
   );
 }
 
