@@ -12,9 +12,9 @@ export class Dropdownthing extends React.Component {
         </Dropdown.Toggle>
 
         <Dropdown.Menu className="selection">
-          <Dropdown.Item href="/2019">2019</Dropdown.Item>
-          <Dropdown.Item href="/2020">2020</Dropdown.Item>
-          <Dropdown.Item href="/2021">2021</Dropdown.Item>
+          <Dropdown.Item href="/2019">2018/2019</Dropdown.Item>
+          <Dropdown.Item href="/2020">2019/2020</Dropdown.Item>
+          <Dropdown.Item href="/2021">2020/2021</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     )
