@@ -3,7 +3,8 @@ import './App.css';
 import SearchBar from './Components/SearchBar.js';
 import VideoPlayer from './Components/VideoPlayer.js';
 import Data from "./Data.json";
-import Dropdown from "./Components/Dropdown.js";
+import { Dropdownthing } from './Components/Dropdownthing';
+
 function App() {
   const [linkValue, getLinkValue] = useState("https://www.youtube.com/watch?v=dJ0Xcu0vJNU");
   
@@ -14,9 +15,12 @@ function App() {
         <h1> Fleetwood Park Grade 8 Gallery</h1>
       </div>
     
-    <SearchBar placeholder="Enter a name" data={Data} getLinkValue={getLinkValue}/>
+    <div className='Search-Container'>
+      <Dropdownthing />
+      <SearchBar placeholder="Enter a name" data={Data} getLinkValue={getLinkValue}/>
+    </ div>
     <VideoPlayer link={linkValue}/>
-
+    
   </div>
   );
 }
