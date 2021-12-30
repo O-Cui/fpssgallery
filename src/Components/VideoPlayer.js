@@ -4,10 +4,10 @@ import "./VideoPlayer.css";
 
 {/* Video for youtube player: https://www.youtube.com/watch?v=7sDY4m8KNLc */}
 
-function VideoPlayer({link}) {
+function VideoPlayer({link, timeStamp}) {
     return (
         <div className="videoDisplay">
-            <ReactPlayer controls url={link}/>
+            <ReactPlayer controls url={link + "&t=" + timeStamp}/>
         </div>
 
 

@@ -3,9 +3,8 @@ import './App.css';
 import SearchBar from './Components/SearchBar.js';
 import VideoPlayer from './Components/VideoPlayer.js';
 import Data from "./Data.json";
-import Dropdown from "./Components/Dropdown.js";
 function App() {
-  const [linkValue, getLinkValue] = useState("https://www.youtube.com/watch?v=dJ0Xcu0vJNU");
+  const [timeStamp, getTimeStamp] = useState(30);
   
   return (
 
@@ -14,8 +13,8 @@ function App() {
         <h1> Fleetwood Park Grade 8 Gallery</h1>
       </div>
     
-    <SearchBar placeholder="Enter a name" data={Data} getLinkValue={getLinkValue}/>
-    <VideoPlayer link={linkValue}/>
+    <SearchBar placeholder="Enter a name" data={Data} getTimeStamp={getTimeStamp}/>
+    <VideoPlayer link={"https://www.youtube.com/watch?v=2uMc3rNnTo4"} timeStamp={timeStamp}/>
 
   </div>
   );

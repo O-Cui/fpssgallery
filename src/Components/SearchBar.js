@@ -9,7 +9,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
         Outside click: https://www.youtube.com/watch?v=iNJ5sIUqDpU*/}
 
 
-function SearchBar( {placeholder, data, getLinkValue}) {
+function SearchBar( {placeholder, data, getTimeStamp}) {
     const[filteredData, setFilteredData] = useState([]);
     const[nameEntered, setNameEntered] = useState([]);
     const [notHidden, setNotHidden] = useState(false);
@@ -32,7 +32,7 @@ function SearchBar( {placeholder, data, getLinkValue}) {
     };
 
     const clickHandler=(value)=>{
-        getLinkValue(value.link)
+        getTimeStamp(value.timestamp)
         setNotHidden(true);
     }
     return (
