@@ -3,7 +3,6 @@ import "./SearchBar.css";
 import CloseIcon from "@material-ui/icons/Close";
 import SearchIcon from "@material-ui/icons/Search";
 import OutsideClickHandler from 'react-outside-click-handler';
-
 {/* Videos:
         Search Bar: https://www.youtube.com/watch?v=x7niho285qs
         Outside click: https://www.youtube.com/watch?v=iNJ5sIUqDpU*/}
@@ -33,7 +32,7 @@ function SearchBar( {placeholder, data, getTimeStamp}) {
 
     const clickHandler=(value)=>{
         getTimeStamp(value.timestamp)
-        setNotHidden(true);
+        setNotHidden(false);
     }
     return (
         <div className="search">

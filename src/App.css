@@ -1,23 +1,37 @@
 .App {
   width :100%;
-  height :100vw;
+  height :auto;
   display :flex;
   align-items: center;
   flex-direction: column; 
-  background-image: linear-gradient(90deg, #008080, #C6FFFF);
+  top: 100px;
+  
 }
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .Header h1 {
-  padding: 30px;
+  width: 100%;
+  vertical-align: middle;
+  padding: 300px;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .Search-Container {
   display: flex;
+  z-index: 5;
+}
+.Background {
+  width: 100%;
+  height :auto;
+  left: 0;
+  position:absolute;
+  z-index: -10;
+  text-align:center;
 }

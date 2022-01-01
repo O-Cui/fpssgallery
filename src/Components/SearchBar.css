@@ -12,6 +12,7 @@
     padding: 15px;
     height: 60px;
     width: 300px;
+
   }
   
   .searchIcon {
@@ -30,7 +31,7 @@
   }
 
   .dataResult {
-    position: relative;
+    position: absolute;
     z-index: 1;
     margin-top: 5px;
     width: 300px;
