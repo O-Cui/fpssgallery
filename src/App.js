@@ -33,7 +33,10 @@ function App() {
       <div className="Background" style={{transform: `translateY(-${offsetY * 0.5}px)`}}>
         <img src="./background.jpg" alt="" />
       </div>
-      <div className="Header"style={{transform: `translateY(-${offsetY * 0.01  }px)`}}> 
+      <div className="Dragon">
+        <img src="./teal dragon.jpg" alt="" />
+      </div>
+      <div className="Header"style={{transform: `translateY(-${offsetY * 0.1  }px)`}}> 
         <h1> Fleetwood Park Grade 8 Gallery</h1> 
       </div>
 
