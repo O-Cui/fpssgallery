@@ -1,12 +1,12 @@
-//POWERRRRRRRR
-
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import Years from "./Years.json";
+import Data from "./Data.json";   
 import SearchBar from './Components/SearchBar.js';
 import VideoPlayer from './Components/VideoPlayer.js';
-import Data from "./Data.json";   
 import Dropdownthing from "./Components/Dropdownthing.js";
-import Years from "./Years.json";
+import DescriptionIcon from "./Components/DescriptionIcon.js";
+
 function App() {
   const [timeStamp, getTimeStamp] = useState(30);
   const [yearLink, getYearLink] = useState("");
@@ -31,22 +31,20 @@ function App() {
    
   <div className="App"> 
       <div className="Background" style={{transform: `translateY(-${offsetY * 0.5}px)`}}>
-        <img src="./background.jpg" alt="" />
+        <img src="./background.jpeg" alt="" />
       </div>
-      <div className="Dragon">
-        <img src="./teal dragon.jpg" alt="" />
-      </div>
-      <div className="Header"style={{transform: `translateY(-${offsetY * 0.1  }px)`}}> 
+      <DescriptionIcon/>
+      <div className="Header"style={{transform: `translateY(${offsetY * 0.9 }px)`}}> 
         <h1> Fleetwood Park Grade 8 Gallery</h1> 
       </div>
-
-      <div className='Search-Container'style={{transform: `translateY(-${offsetY * 0.9  }px)`}} >
-        <Dropdownthing getYearLink={getYearLink}/>
-        <SearchBar placeholder="Enter a name" data={Data} getTimeStamp={getTimeStamp}/>
+      <div style={{transform: `translateY(${offsetY * 0.6  }px)`}}>
+         <VideoPlayer link={yearLink} timeStamp={timeStamp}/>
       </div>
-    <div style={{transform: `translateY(-${offsetY * 1.5  }px)`}}>
-    <VideoPlayer link={yearLink} timeStamp={timeStamp}/>
-    </div>
+      <div className='Search-Container'style={{transform: `translateY(${offsetY * 0.8  }px)` }} >
+        <Dropdownthing getYearLink={getYearLink}/>
+        <SearchBar placeholder="Enter a name" data={Data} getTimeStamp={getTimeStamp} />
+      </div>
+
   </div>
 
   );

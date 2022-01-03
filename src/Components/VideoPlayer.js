@@ -19,8 +19,6 @@ function VideoPlayer({link, timeStamp}) {
             <ReactPlayer controls url={link + "&t=" + timeStamp} playing={true}/>
         </div>
 
-
-
     )
 }
 export default VideoPlayer;
